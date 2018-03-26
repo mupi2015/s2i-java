@@ -44,6 +44,7 @@ COPY ./contrib/settings.xml $HOME/.m2/
 
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 COPY ./sti/bin/ /usr/local/sti
+RUN chmod +x /usr/local/sti/*
 
 RUN chown -R 1001:1001 /opt/openshift
 
